@@ -1,17 +1,17 @@
 # Say It Human
 
-Make your text sound like a real human wrote it.
+让文字像人一样说话。
 
-Say It Human 致力于让文字像人一样说话，消除 AI 味和套话，让内容更自然、更真实。
+## 简介
 
-## 包含的技能
+Say It Human 致力于消除 AI 味和套话，让内容更自然、更真实。
 
 本项目包含两个 Claude Code Skills：
 
 - **去AI味**：AI写的，改成人说的
 - **改稿手**：人写的，找到他真正想说的
 
-## 怎么用
+## 使用指南
 
 | 你的内容 | 用哪个 | 核心动作 |
 |---------|--------|---------|
@@ -109,16 +109,16 @@ Say It Human 致力于让文字像人一样说话，消除 AI 味和套话，让
 下周重点：把支付流程跑通，争取提测。
 ```
 
-## Installation
+## 安装方法
 
-### Manual Installation
+### 手动安装
 
-1. Download or clone this repository
-2. Copy the `skills/` folder to your Claude Code skills directory:
+1. 下载或克隆本仓库
+2. 将 `skills/` 文件夹复制到 Claude Code 的 skills 目录：
    - macOS/Linux: `~/.claude/skills/`
    - Windows: `%USERPROFILE%\.claude\skills\`
 
-3. Folder structure:
+3. 目录结构：
 ```
 ~/.claude/skills/
 ├── humanize-ai/
@@ -127,34 +127,34 @@ Say It Human 致力于让文字像人一样说话，消除 AI 味和套话，让
     └── SKILL.md
 ```
 
-### Git Clone
+### Git 克隆
 
 ```bash
-git clone https://github.com/yourusername/say-it-human.git
+git clone https://github.com/taxue2025/say-it-human.git
 cp -r say-it-human/skills/* ~/.claude/skills/
 ```
 
-## Project Structure
+## 项目结构
 
 ```
 say-it-human/
 ├── skills/
-│   ├── humanize-ai/          # Remove AI flavor
+│   ├── humanize-ai/          # 去AI味
 │   │   └── SKILL.md
-│   └── editor-revisor/       # Editorial revision
+│   └── editor-revisor/       # 改稿手
 │       └── SKILL.md
-├── examples/                 # Example transformations
+├── examples/                 # 示例
 │   ├── marketing.md
 │   ├── academic.md
 │   └── work.md
 ├── README.md
-└── LICENSE                   # MIT License
+└── LICENSE                   # MIT 许可证
 ```
 
 ## 致谢
 
+感谢 ChatGPT、Claude、Gemini、Grok、DeepSeek、Qwen 等 AI 助手提供的创作样本，为本项目提供了丰富的改写示例。
 
-感谢ChatGPT、Claude、Gemini、Grok、DeepSeek、qwen 等 AI 助手的创作的样本为本项目提供了丰富的改写示例，
+本项目的诞生离不开这些先进 AI 团队的支持，改稿水平也因此得到了进一步提升。欢迎大家支持这个"用魔法打败魔法"的项目。
 
-本项目的诞生离不开这些先进的 AI团队的支持，本项目的改稿水平也因此得到了进一步的提供，欢迎大家支持这个用魔法打败魔法。
-
+MIT License
