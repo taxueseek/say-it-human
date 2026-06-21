@@ -73,19 +73,22 @@ npx -y skills add taxueseek/say-it-human -g --all
 
 ## 工具箱
 
-### 核心诊断工具
+五个技能，覆盖写作全流程——从声音校准到发布前包装。
 
-| Skill | 做什么 | 触发词 |
-|-------|--------|--------|
-| `/humanize-ai` 或 `去 AI 味` | AI 生成内容改写。19 维检测 + 浓度分级 + 直接输出改写版本 | AI味、像机器写的、太正式、读起来假、AI腔、不像人写的 |
-| `/editor-revisor` 或 `改稿手` | 人写的内容，被套话淹没。找到真话，去除废话 | 帮我改稿、废话太多、读起来不像我、润色 |
+| 顺序 | Skill | 做什么 | 触发词 |
+|------|-------|--------|--------|
+| 1 | `voice-dissolver`（声音校准） | 写之前，先搞清「我想让读者感受到什么」。输出声音锚点卡，传给下游当保护区 | 不像我写的、找回自己的声音、文字里没有我 |
+| 2 | `humanize-ai`（去 AI 味） | AI 生成内容改写。19 维检测 + 浓度分级 + 直接输出改写版本 | AI味、像机器写的、太正式、读起来假、AI腔 |
+| 3 | `editor-revisor`（改稿手） | 人写的内容被套话淹没。找到真话，去除废话 | 帮我改稿、废话太多、读起来不像我、润色 |
+| 4 | `chinese-write-checker`（内容体检） | 发布前全面体检。不改稿，只验收 + 路由推荐 | 帮我看看写得怎么样、这篇能不能发、文章质量验收 |
+| 5 | `packaging-workshop`（包装工坊） | 定稿后的呈现层：标题打磨、开头钩子、排版、标点、配图、平台适配 | 帮我打磨标题、排版太密了、准备发布了帮我过一遍 |
 
-### 两个 skill 的分工
+### 使用流程
 
-| 你的内容 | 用哪个 | 核心动作 |
-|---------|--------|---------|
-| AI 生成的，机械、空洞 | **去 AI 味** | 概念→场景，趋势→时间线 |
-| 人写的，但全是套话 | **改稿手** | 找到真话，去除废话 |
+```
+voice-dissolver → humanize-ai → editor-revisor → chinese-write-checker → packaging-workshop
+   （定声音）        （去AI味）       （删废话）         （体检验收）           （包装发布）
+```
 
 ---
 
@@ -229,20 +232,26 @@ npx -y skills add taxueseek/say-it-human -g --all
 ```
 say-it-human/
 ├── skills/
+│   ├── voice-dissolver/      # 声音校准
+│   │   └── SKILL.md
 │   ├── humanize-ai/          # 去 AI 味
 │   │   └── SKILL.md
-│   └── editor-revisor/       # 改稿手
+│   ├── editor-revisor/       # 改稿手
+│   │   └── SKILL.md
+│   ├── chinese-write-checker/ # 内容体检
+│   │   └── SKILL.md
+│   └── packaging-workshop/   # 包装工坊
 │       └── SKILL.md
-├── references/               # 参考文档（19维详细信号、示例、写作规范）
+├── references/
 │   ├── extended-patterns.md
 │   ├── examples.md
 │   └── title-and-opening-patterns.md
-├── examples/                 # 改写示例
+├── examples/
 │   ├── marketing.md
 │   ├── academic.md
 │   └── work.md
 ├── README.md
-└── LICENSE                   # MIT 许可证
+└── LICENSE
 ```
 
 ---
