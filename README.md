@@ -91,7 +91,7 @@ npx -y skills add taxueseek/say-it-human -g --all
 |----|-------|--------|--------|
 | L1.5 | `style-blade`（风格刃） | 风格化写作：棱角（有态度不圆滑）、锐利（短狠准关键句置后）、密度压缩（外科手术式删减） | 写得犀利一点、来一段有态度的、有棱角、压缩一下 |
 | L3.5 | `scene-fit`（场景适配） | 五场景适配：技术文档、广告文案、PPT演示、社交媒体、Release Notes | 这篇适合发XX、帮我改成XX格式、技术文档规范、广告文案 |
-| L3.5 | `punct-master`（标点大师） | 标点综合治理：12类AI错误检测+自动修正，四类场景差异化规则，代码保护，英文校对 | 检查标点、修正标点、标点有问题、半角改全角、中西空格 |
+| L3.5 | `punct-polish`（标点打磨） | AI标点错误一次性解决：半角逗号、缺少中西空格、直引号、破折号滥用。代码/URL完全不动，具备英文校对能力 | 检查标点、修正标点、标点有问题、半角改全角、中西空格 |
 
 ### 使用流程（MECE 分层）
 
@@ -103,7 +103,7 @@ voice-dissolver  →  chinese-write-checker  →  humanize-ai  →  editor-revis
                        ↓
                   scene-fit（L3.5 场景适配，可选）
                        ↓
-                  punct-master（L3.5 标点治理，可选）
+                  punct-polish（L3.5 标点打磨，可选）
 ```
 
 **各层只问一类问题，互不重叠：**
@@ -134,25 +134,23 @@ voice-dissolver  →  chinese-write-checker  →  humanize-ai  →  editor-revis
 
 ---
 
-## 场景适配（scene-fit）
+## 场景对位（scene-fit）
 
-五场景规则矩阵：
+五种场景的规则：
 
-| 场景 | 核心规则 |
-|------|---------|
-| 技术文档 | 准确先于修辞、一义一段、机器可读保护 |
-| 广告文案 | AIDA框架、标题八公式、CTA设计 |
-| PPT演示 | 一页一论点、三明治配色、图>表>文字 |
-| 社交媒体 | 平台语感矩阵、互动钩子、情绪曲线 |
-| Release Notes | 用户可见变化导向、从git log提取 |
+- **技术文档**：准确先于修辞、一义一段、机器可读保护
+- **广告文案**：AIDA框架、八种标题写法、CTA设计
+- **PPT演示**：一页一论点、三明治配色、图>表>文字
+- **社交媒体**：不同平台有不同语感、互动钩子、情绪曲线
+- **Release Notes**：用户可见变化导向、从git log提取
 
 ---
 
-## 标点大师（punct-master）
+## 标点打磨（punct-polish）
 
-12类AI常见标点错误 + 四类场景差异化规则 + 英文总编辑能力。
+AI写中文最常见的标点毛病一次性解决。
 
-**AI最常犯的标点错误TOP5**：
+**最高频的五种错误**：
 1. 半角逗号 → `，`
 2. 半角句号 → `。`
 3. 缺少中西空格 → `使用 React 构建`
@@ -342,7 +340,7 @@ say-it-human/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── scene-rules.md
-│   └── punct-master/             # [L3.5] 标点大师（v2.0 新增）
+│   └── punct-polish/             # [L3.5] 标点打磨（v2.0 新增）
 │       ├── SKILL.md
 │       ├── references/
 │       │   ├── ai-common-mistakes.md
@@ -358,6 +356,9 @@ say-it-human/
 │   ├── marketing.md
 │   ├── academic.md
 │   └── work.md
+├── _archived/                   # 已吸纳的单技能归档
+│   ├── 棱角文案/                 # → style-blade 棱角模式
+│   └── Tech-Doc-Style-Chinese/   # → scene-fit 技术文档场景
 ├── README.md
 └── LICENSE
 ```
