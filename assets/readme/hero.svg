@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Say It Human</title>
+  <desc id="desc">给一段文字，它先标出哪里像机器写的。默认只检测不改。</desc>
+
+  <rect width="1200" height="360" rx="26" fill="#F3EEE4"/>
+  <rect x="1" y="1" width="1198" height="358" rx="25" fill="none" stroke="#E2D8C8" stroke-width="1"/>
+
+  <g id="title-block" transform="translate(56 52)">
+    <text x="0" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#B42318" letter-spacing="2.4">WRITING TOOLKIT · DETECT FIRST</text>
+    <text x="0" y="78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="48" font-weight="700" fill="#1C1814">Say It Human</text>
+    <text x="0" y="122" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="20" fill="#3F3832">给一段文字，它先标出哪里像机器写的</text>
+    <text x="0" y="156" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="16" fill="#6F675E">默认只检测不改。要不要动手，你说了算。</text>
+
+    <g transform="translate(0 198)" font-family="ui-monospace, Menlo, monospace" font-size="12">
+      <rect width="92" height="30" rx="6" fill="#1C1814"/>
+      <text x="46" y="20" text-anchor="middle" fill="#F3EEE4">v1.6.0</text>
+      <rect x="104" width="118" height="30" rx="6" fill="#FFFCF7" stroke="#E2D8C8"/>
+      <text x="163" y="20" text-anchor="middle" fill="#B42318">19 维检测</text>
+      <rect x="234" width="132" height="30" rx="6" fill="#FFFCF7" stroke="#E2D8C8"/>
+      <text x="300" y="20" text-anchor="middle" fill="#3F3832">5 skill 分层</text>
+    </g>
+  </g>
+
+  <g id="project-proof" transform="translate(640 40)">
+    <rect width="508" height="280" rx="14" fill="#FFFCF7" stroke="#E2D8C8"/>
+    <rect width="508" height="36" rx="14" fill="#F7F1E6"/>
+    <rect y="18" width="508" height="18" fill="#F7F1E6"/>
+    <text x="20" y="24" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#8A7F74">draft.md · 检测报告</text>
+    <text x="470" y="24" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#B42318">浓度 中等</text>
+
+    <text x="28" y="78" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="15" fill="#9A9188">综上所述，在当今背景下，这至关重要。</text>
+    <line x1="28" y1="72" x2="430" y2="72" stroke="#B42318" stroke-width="1.6"/>
+    <text x="28" y="108" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="16" fill="#1C1814">读到上一句就能猜到下一句。</text>
+    <text x="28" y="134" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="16" fill="#1C1814">这才是问题。</text>
+
+    <rect x="28" y="168" width="452" height="1" fill="#EDE4D6"/>
+    <text x="28" y="198" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#8A7F74">#12 RLHF 模板化</text>
+    <text x="28" y="222" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#8A7F74">#16 套话修饰</text>
+    <text x="28" y="246" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#B42318">改写：opt-in</text>
+  </g>
+</svg>
